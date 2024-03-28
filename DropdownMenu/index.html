@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ヘッダー</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="site">
+      <header class="site__header header">
+        <a class="visuallyHidden" href="#main">コンテンツにスキップ</a>
+        <div class="header__inner">
+          <h1 class="header__title">
+            <a href="#">Logo</a>
+          </h1>
+          <nav class="header__nav">
+            <h2 class="visuallyHidden">サイトメニュー</h2>
+            <button type="button" class="hamburger js-hamburger" aria-controls="globalNav" aria-expanded="false">
+              <span class="hamburger__line">
+                <span class="visuallyHidden">メニューを開閉</span>
+              </span>
+            </button>
+            <div class="globalNav" id="globalNav">
+              <ul class="globalNav__list">
+                <li class="globalNav__item">
+                  <a class="globalNav__link" href="#">メニュー1</a>
+                </li>
+                <li class="globalNav__item js-hasDropdown">
+                  <button type="button" class="globalNav__link js-dropdownButton">メニュー2</button>
+                  <div class="dropdown js-dropdown">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <a href="#">メニュー2-1</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#">メニュー2-2</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#">メニュー2-3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="globalNav__item">
+                  <a class="globalNav__link" href="#">メニュー3</a>
+                </li>
+                <li class="globalNav__item js-hasDropdown">
+                  <button type="button" class="globalNav__link js-dropdownButton">メニュー4</button>
+                  <div class="dropdown js-dropdown">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <a href="#">メニュー4-1</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#">メニュー4-2</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#">メニュー4-3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="globalNav__item">
+                  <a class="button -primary -full" href="#">Action</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.globalNav -->
+          </nav>
+        </div>
+      </header>
+      <main class="site__main" id="main">
+        <div style="display: grid; gap: 20px; place-items: center">
+          <img
+            src="https://picsum.photos/id/100/600/600"
+            alt=""
+            style="display: block; width: min(100%, 600px); height: auto"
+          />
+          <img
+            src="https://picsum.photos/id/100/600/600"
+            alt=""
+            style="display: block; width: min(100%, 600px); height: auto"
+          />
+          <img
+            src="https://picsum.photos/id/100/600/600"
+            alt=""
+            style="display: block; width: min(100%, 600px); height: auto"
+          />
+        </div>
+      </main>
+      <footer class="footer">footer</footer>
+    </div>
+    <!-- /.site -->
+  </body>
+</html>
