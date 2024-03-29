@@ -1,0 +1,50 @@
+body {
+  color: #222;
+  font-family: sans-serif;
+}
+
+.section {
+  display: grid;
+  place-items: center;
+  height: 100svh;
+}
+
+.section:nth-child(1) {
+  background-color: burlywood;
+}
+
+.text {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-family: serif;
+  clip-path: inset(0 0 0);
+}
+
+.text span {
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 100%;
+  transition-property: opacity, visibility, translate;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text.is-visible span {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+}
+
+.visuallyHidden:not(:focus-visible) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+}
