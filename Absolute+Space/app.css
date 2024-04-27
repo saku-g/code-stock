@@ -1,3 +1,10 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.8;
+}
+
 .works {
   padding: 120px 0 128px;
   background-color: #f9f9f9;
@@ -44,7 +51,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 84px;
+  /* margin-bottom: 84px; */
   padding-top: 56px;
 }
 .works-img {
