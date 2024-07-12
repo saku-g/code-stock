@@ -17,7 +17,6 @@ window.addEventListener('resize', setScrollbarWidth);
 /*
   BackgroundFixed
 ————————————————————————————————————————— */
-
 /**
  *
  * @param {boolean} isFixed - 背景を固定するかどうかのフラグ
