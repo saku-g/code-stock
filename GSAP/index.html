@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Lessons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              fadeToggle: {
+                '0%': {
+                  opacity: 0,
+                },
+                '100%': {
+                  opacity: 1,
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="bg-gray-100 py-[50vh] min-h-dvh">
+    <div class="container mx-auto">
+      <div class="grid gap-y-32">
+        <p class="text-4xl font-bold text-neutral-900" data-animation="fadeIn">FadeIn</p>
+        <p class="text-4xl font-bold text-neutral-900 origin-center" data-animation="blurIn">BlurIn</p>
+        <p class="text-4xl font-bold text-neutral-900 overflow-hidden" data-animation="oneCharFadeInUp">
+          OneCharFadeInUp
+        </p>
+        <p class="text-4xl font-bold text-neutral-900" data-animation="slideInLeft">SlideInLeft</p>
+        <p class="text-4xl font-bold text-neutral-900" data-animation="slideInRight">slideInRight</p>
+        <p class="text-4xl font-bold text-neutral-900" data-animation="slideInTop">slideInTop</p>
+        <p class="text-4xl font-bold text-neutral-900" data-animation="slideInBottom">slideInBottom</p>
+        <div class="overflow-hidden">
+          <p class="text-4xl font-bold text-neutral-900" data-animation="smoothIn">smoothIn</p>
+        </div>
+        <p
+          class="text-4xl font-bold text-neutral-900 after:content-['|'] after:ml-1 after:animate-[fadeToggle_1s_ease-in-out_infinite]"
+          data-animation="oneCharTyping"
+        >
+          Typing
+        </p>
+        <div
+          class="relative overflow-hidden w-fit before:absolute before:inset-0 before:p-2 before:bg-gradient-to-r before:from-blue-500 before:to-blue-900 before:translate-x-[--pos,-101%]"
+          data-animation="bgSlideLeft"
+        >
+          <p class="text-4xl font-bold text-neutral-900 opacity-0" data-animation="bgSlideLeft_text">bgSlideLeft</p>
+        </div>
+        <div
+          class="relative overflow-hidden w-fit before:absolute before:inset-0 before:p-2 before:bg-gradient-to-r before:from-blue-500 before:to-blue-900 before:translate-y-[--pos,-101%]"
+          data-animation="bgSlideBottom"
+        >
+          <p class="text-4xl font-bold text-neutral-900 opacity-0" data-animation="bgSlideBottom_text">bgSlideBottom</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
