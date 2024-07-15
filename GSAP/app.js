@@ -227,3 +227,26 @@ bgSlideBottomTl
     },
     '-=0.4'
   );
+
+// 横スクロール
+const scrollContent = document.querySelector('.js-sideScrollContent');
+const cardList = document.querySelector('.js-cardList');
+console.log(cardList.clientWidth, scrollContent.clientWidth);
+
+gsap.to(cardList, {
+  x: () => -(cardList.clientWidth - scrollContent.clientWidth),
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.js-sideScrollSection',
+    start: 'top top',
+    end: () => `+=${cardList.clientWidth - scrollContent.clientWidth}`,
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    invalidateOnRefresh: true,
+    markers: true,
+    onLeave: self => {
+      self.pin.style.height = 'auto';
+    },
+  },
+});
