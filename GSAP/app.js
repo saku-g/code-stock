@@ -245,8 +245,5 @@ gsap.to(cardList, {
     anticipatePin: 1,
     invalidateOnRefresh: true,
     markers: true,
-    onLeave: self => {
-      self.pin.style.height = 'auto';
-    },
   },
 });
