@@ -231,7 +231,8 @@ bgSlideBottomTl
 // 横スクロール
 const scrollContent = document.querySelector('.js-sideScrollContent');
 const cardList = document.querySelector('.js-cardList');
-console.log(cardList.clientWidth, scrollContent.clientWidth);
+// console.log(cardList.clientWidth, scrollContent.clientWidth);
+// console.log(cardList.clientWidth - scrollContent.clientWidth);
 
 gsap.to(cardList, {
   x: () => -(cardList.clientWidth - scrollContent.clientWidth),
@@ -245,5 +246,27 @@ gsap.to(cardList, {
     anticipatePin: 1,
     invalidateOnRefresh: true,
     markers: true,
+  },
+});
+
+// Swiper
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  effect: 'fade',
+  autoplay: {
+    delay: 5000,
+  },
+});
+
+// 画像をピン留め
+gsap.to('.js-heroParallax', {
+  scrollTrigger: {
+    trigger: '.js-heroParallax',
+    start: 'top top',
+    end: 'bottom top',
+    pin: true,
+    onEnter: () => {
+      console.log('enter');
+    },
   },
 });

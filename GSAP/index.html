@@ -4,11 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GSAP Lessons</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              sans: ['Roboto', 'Noto Sans JP', 'sans-serif'],
+            },
             keyframes: {
               fadeToggle: {
                 '0%': {
@@ -23,9 +37,11 @@
         },
       };
     </script>
+    <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <!-- My JS File -->
     <script src="app.js" defer></script>
   </head>
   <body class="bg-gray-100 pt-[50vh] min-h-dvh">
@@ -66,139 +82,188 @@
     <section class="mt-80 py-20 js-sideScrollSection">
       <div class="container mx-auto">
         <h2 class="text-4xl font-bold text-stone-900">GSAPを使って横スクロールさせるエリア</h2>
-          <div class="h-[400px] mt-12 overflow-hidden js-sideScrollContent">
-            <div class="absolute flex gap-x-6  js-cardList">
-              <section class="grid min-w-[320px] bg-white">
-                <div class="order-1 p-4">
-                  <h3 class="text-xl font-bold">Card Title</h3>
-                  <p class="mt-2 leading-7">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia
-                    recusandae quidem.
-                  </p>
-                </div>
-                <div class="overflow-hidden">
-                  <img
-                    class="w-full h-auto object-cover"
-                    src="https://picsum.photos/600/400?random=1"
-                    alt=""
-                    width="300"
-                    height="200"
-                  />
-                </div>
-              </section>
-              <section class="grid min-w-[320px] bg-white">
-                <div class="order-1 p-4">
-                  <h3 class="text-xl font-bold">Card Title</h3>
-                  <p class="mt-2 leading-7">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia
-                    recusandae quidem.
-                  </p>
-                </div>
-                <div class="overflow-hidden">
-                  <img
-                    class="w-full h-auto object-cover"
-                    src="https://picsum.photos/600/400?random=1"
-                    alt=""
-                    width="300"
-                    height="200"
-                  />
-                </div>
-              </section>
-              <section class="grid min-w-[320px] bg-white">
-                <div class="order-1 p-4">
-                  <h3 class="text-xl font-bold">Card Title</h3>
-                  <p class="mt-2 leading-7">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia
-                    recusandae quidem.
-                  </p>
-                </div>
-                <div class="overflow-hidden">
-                  <img
-                    class="w-full h-auto object-cover"
-                    src="https://picsum.photos/600/400?random=1"
-                    alt=""
-                    width="300"
-                    height="200"
-                  />
-                </div>
-              </section>
-              <section class="grid min-w-[320px] bg-white">
-                <div class="order-1 p-4">
-                  <h3 class="text-xl font-bold">Card Title</h3>
-                  <p class="mt-2 leading-7">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia
-                    recusandae quidem.
-                  </p>
-                </div>
-                <div class="overflow-hidden">
-                  <img
-                    class="w-full h-auto object-cover"
-                    src="https://picsum.photos/600/400?random=1"
-                    alt=""
-                    width="300"
-                    height="200"
-                  />
-                </div>
-              </section>
-              <section class="grid min-w-[320px] bg-white">
-                <div class="order-1 p-4">
-                  <h3 class="text-xl font-bold">Card Title</h3>
-                  <p class="mt-2 leading-7">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia
-                    recusandae quidem.
-                  </p>
-                </div>
-                <div class="overflow-hidden">
-                  <img
-                    class="w-full h-auto object-cover"
-                    src="https://picsum.photos/600/400?random=1"
-                    alt=""
-                    width="300"
-                    height="200"
-                  />
-                </div>
-              </section>
-              <section class="grid min-w-[320px] bg-white">
-                <div class="order-1 p-4">
-                  <h3 class="text-xl font-bold">Card Title</h3>
-                  <p class="mt-2 leading-7">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia
-                    recusandae quidem.
-                  </p>
-                </div>
-                <div class="overflow-hidden">
-                  <img
-                    class="w-full h-auto object-cover"
-                    src="https://picsum.photos/600/400?random=1"
-                    alt=""
-                    width="300"
-                    height="200"
-                  />
-                </div>
-              </section>
-              <section class="grid min-w-[320px] bg-white">
-                <div class="order-1 p-4">
-                  <h3 class="text-xl font-bold">Card Title</h3>
-                  <p class="mt-2 leading-7">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia
-                    recusandae quidem.
-                  </p>
-                </div>
-                <div class="overflow-hidden">
-                  <img
-                    class="w-full h-auto object-cover"
-                    src="https://picsum.photos/600/400?random=1"
-                    alt=""
-                    width="300"
-                    height="200"
-                  />
-                </div>
-              </section>
-            </div>
+        <div class="h-[400px] mt-12 overflow-hidden js-sideScrollContent">
+          <div class="absolute flex gap-x-6 js-cardList">
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
           </div>
         </div>
       </div>
     </section>
-    <section class="bg-green-700 h-dvh"></section>
+    <!-- hero-parallax -->
+    <div class="grid gap-y-12">
+      <p class="max-w-5xl mx-auto text-9xl text-green-900 font-black tracking-[-0.07em]">想いを叶える。</p>
+      <div class="relative pt-40 pb-80 overflow-hidden">
+        <div class="grid gap-y-24 max-w-5xl mx-auto">
+          <p class="text-lg max-w-2xl text-white font-bold leading-loose">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel debitis minima, delectus dicta rerum
+            reiciendis odit repellat veniam cumque, velit dignissimos earum quo accusantium mollitia quasi omnis neque.
+            Repudiandae voluptatum aliquam cupiditate atque iste earum neque qui, commodi aperiam placeat corrupti ad
+            consequatur error laborum. Sunt ullam nesciunt quos recusandae libero eligendi ea quam nam voluptates atque.
+            Ad quis facere dicta. Magnam tempore doloremque voluptas, aspernatur ad necessitatibus labore est ex vero a
+            officiis mollitia, maiores temporibus, sunt animi quibusdam asperiores debitis. Eum dolorum ea totam numquam
+            nobis praesentium nulla, incidunt ex voluptatibus aliquam. Excepturi quod quos, voluptates expedita, nulla
+            sunt quis ex asperiores illum temporibus id! Consectetur eveniet officiis quo itaque obcaecati voluptatibus
+            optio. Repudiandae, modi cupiditate. Accusamus, dolorem. Incidunt laborum vitae error sapiente, quisquam sed
+            sunt praesentium earum numquam iste reiciendis iure obcaecati ducimus optio voluptates quidem culpa
+            provident nisi qui magni quis quas officiis. Voluptatem sunt cumque laboriosam, doloribus ex iure veniam
+            exercitationem porro quibusdam aut a. Blanditiis at doloremque consequuntur quaerat ab distinctio ducimus
+            accusamus ut minus reiciendis nihil eveniet delectus harum, incidunt odit aliquid dolorum odio ullam fuga
+            reprehenderit! Dicta aspernatur omnis nostrum voluptate earum ducimus error sed, nemo vitae, inventore
+            reiciendis, dolorem excepturi.
+          </p>
+          <svg width="812" height="472" viewBox="0 0 812 472" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M553.604 89.376C554.64 92.204 555.872 94.752 556.992 96.824C559.036 95.648 561.164 94.556 562.368 93.856C563.572 93.156 564.468 92.624 565.28 91.952L567.632 95.872C566.652 96.46 565.644 97.02 564.496 97.58C562.844 98.392 559.54 99.904 557.076 101.472C554.92 102.9 553.352 104.384 553.352 106.232C553.352 108.08 555.144 108.948 558.728 108.948C561.5 108.948 565.308 108.472 567.968 107.856L567.912 112.756C565.364 113.176 562.564 113.456 558.84 113.456C553.072 113.456 548.62 111.916 548.62 106.736C548.62 103.572 550.608 101.248 553.184 99.316C551.896 96.908 550.58 94.024 549.348 91.112L553.604 89.376ZM578.132 97.328C582.248 97.692 585.832 97.748 588.856 97.608C588.772 97.356 588.688 97.132 588.604 96.908C588.436 96.376 588.268 95.928 588.156 95.536C585.524 95.648 582.36 95.592 578.832 95.256L578.608 91.392C581.884 91.756 584.6 91.896 587.064 91.84C586.812 91.028 586.532 90.188 586.224 89.292L590.76 88.816C590.872 89.796 591.04 90.692 591.208 91.56C593.056 91.336 594.792 90.944 596.584 90.384L597.116 94.248C595.604 94.668 593.924 95.004 592.16 95.228C592.244 95.564 592.356 95.872 592.468 96.208C592.58 96.516 592.72 96.88 592.86 97.272C595.1 96.964 596.696 96.544 598.068 96.152L598.74 100.156C597.48 100.464 596.108 100.716 594.624 100.94C594.988 101.64 595.38 102.312 595.744 102.872C596.164 103.488 596.556 103.936 597.116 104.468L595.128 107.52C593.56 107.24 590.284 106.848 588.184 106.624L588.52 103.404C589.5 103.488 590.872 103.6 591.656 103.656C591.208 102.872 590.816 102.116 590.452 101.36C587.008 101.556 582.528 101.556 578.356 101.304L578.132 97.328ZM584.236 104.104C583.564 105 582.948 105.98 582.948 107.156C582.948 109.088 584.852 109.76 588.184 109.76C590.844 109.76 593.42 109.536 595.408 109.144L595.156 113.456C593.196 113.764 590.424 113.988 588.184 113.988C582.528 113.988 578.832 112.308 578.748 108.108C578.692 106.176 579.364 104.692 580.036 103.32L584.236 104.104Z"
+              fill="white"
+            />
+            <path
+              d="M33.6 23.12C32.64 28.16 31.92 35.96 31.92 39.44C31.92 47.36 31.92 55.16 32.64 63.2C34.08 78.92 36.48 89.96 43.44 89.96C48.96 89.96 53.16 74.96 54.96 66.8L69.6 84.8C61.2 106.04 53.52 113.48 43.08 113.48C28.8 113.48 17.04 101.36 13.68 68.6C12.48 57.2 12.36 43.4 12.36 35.84C12.36 32.24 12.12 27.08 11.28 22.88L33.6 23.12ZM92.28 25.4C104.04 39.2 113.52 71.72 114.6 89L95.28 96.44C93.6 78.32 87.72 46.76 73.68 31.4L92.28 25.4ZM151.2 95.96C151.2 99.92 155.16 101.96 161.4 101.96C167.52 101.96 170.88 100.28 170.88 94.16C170.88 93.32 170.88 92.12 170.76 90.68C167.88 90.2 164.88 89.96 161.76 89.96C155.04 89.96 151.2 92.6 151.2 95.96ZM188.52 11.96C188.16 14.48 187.8 17.84 187.68 20.72C187.68 21.68 187.56 22.88 187.56 24.2C196.8 23.72 206.28 22.76 216.72 21.08L216.6 37.64C209.4 38.72 198.84 39.68 187.32 40.16C187.2 43.64 187.2 47 187.2 50.12C199.56 49.52 209.16 48.44 218.4 47.36L218.28 64.4C207.72 65.48 198.96 66.2 187.56 66.56C187.8 70.4 188.04 74.48 188.28 78.56C203.04 82.88 214.2 90.56 221.16 96.44L210.72 112.64C204.84 107 197.52 101.24 189.24 97.04V99.44C189.24 110.72 180.12 118.4 164.28 118.4C144 118.4 133.56 110.36 133.56 97.04C133.56 84.2 145.08 75.08 164.16 75.08C166.2 75.08 168.12 75.2 170.04 75.32C169.92 72.56 169.8 69.68 169.68 66.92H163.8C157.44 66.92 143.64 66.32 136.08 65.36L135.84 48.32C143.28 49.76 158.52 50.6 164.04 50.6H169.44C169.44 47.36 169.44 44 169.56 40.76H165.72C158.52 40.76 145.08 39.68 136.92 38.6L136.56 22.16C145.56 23.6 158.64 24.8 165.6 24.8H169.68V20.72C169.68 18.44 169.44 14.6 168.84 11.96H188.52ZM254.995 119.12C247.915 110.48 237.835 100.16 229.555 92.84L244.795 79.76C253.195 86.72 265.195 99.08 270.475 105.8L254.995 119.12ZM68.52 203.44V218.2C74.04 219.04 79.92 219.28 86.04 219.28C92.28 219.4 109.56 219.28 117.36 219.04C114.96 222.88 112.32 230.92 111.36 235.84H84.96C61.92 235.84 43.2 231.88 30.12 215.2C26.28 223.96 21.36 231.76 14.76 237.28C11.76 234.04 5.52 228.64 1.68 226.12C14.52 215.92 19.92 196 21.72 179.44L39.72 181.6C38.76 186.64 37.68 191.92 36.36 197.2C39.96 204.16 44.76 208.96 50.52 212.32V175.72H6V159.64H50.52V150.64H16.8V134.68H50.52V123.4H68.52V134.68H104.4V150.64H68.52V159.64H114.12V175.72H68.52V187.96H105.96V203.44H68.52ZM160.08 128.68C158.88 132.88 156.36 143.08 155.64 148.84C161.88 141.28 171.24 133.84 183.72 133.84C200.88 133.84 214.68 150.4 214.68 177.52C214.68 211.84 194.04 228.76 161.04 234.88L150 217.96C177 213.76 194.88 205.96 194.88 177.52C194.88 159.28 188.76 150.88 180.24 150.88C166.56 150.88 154.92 171.88 154.92 187.72C154.92 190.24 155.04 193.96 155.64 199.24L137.76 200.44C137.04 195.76 136.2 188.08 136.2 179.92C136.2 168.76 137.4 155.56 139.32 141.64C139.92 136.6 140.28 131.08 140.28 127.84L160.08 128.68ZM321.48 185.56H339.72V237.4H321.48V230.68H259.44V237.4H241.68V185.56H259.44V213.64H280.56V179.8H246.48V134.68H264V162.88H280.56V124.96H298.68V162.88H316.44V134.56H334.92V179.8H298.68V213.64H321.48V185.56ZM425.76 128.32C425.4 130.6 424.92 138.04 424.8 140.2V141.52C435.96 141.52 452.04 141.28 458.28 141.4L458.04 158.56C450.96 158.2 439.68 157.96 424.56 157.84C424.68 163.6 424.68 169.72 424.68 174.76C427.8 179.44 429.36 185.44 429.36 191.92C429.36 207.28 419.4 228.16 389.4 236.32L373.92 220.84C384.36 218.68 394.32 215.8 401.4 210.28C400.68 210.4 399.96 210.4 399.24 210.4C390.48 210.4 378 202.84 378 187.36C378 172.84 389.64 163.96 403.56 163.96C404.64 163.96 405.6 163.96 406.56 164.08C406.56 162.04 406.56 160 406.44 157.96C388.44 158.2 370.68 158.92 356.04 159.64L355.56 142.24C369.48 142.36 390.72 141.88 406.2 141.64C406.08 141.16 406.08 140.68 406.08 140.32C405.6 134.56 405.12 130.12 404.76 128.32H425.76ZM395.4 187C395.4 191.32 399.24 194.32 403.08 194.32C406.92 194.32 411 191.56 409.68 182.44C408.12 180.28 405.84 179.2 403.08 179.2C399.36 179.2 395.4 181.48 395.4 187ZM550.2 207.64H553.92V194.08H550.2V207.64ZM529.8 176.8L538.56 179.2L538.32 180.76H553.92V174.16H560.76V168.4H518.16V171.64L523.68 172.72C523.32 174.16 522.96 175.72 522.48 177.16H527.4L529.8 176.8ZM522.84 189.28H518.16C517.32 191.2 516.36 193.12 515.4 194.92C516.96 196 518.52 197.2 519.96 198.28C521.04 195.4 522.12 192.4 522.84 189.28ZM530.4 143.92L537.6 140.56C532.8 141.04 527.88 141.4 523.08 141.64C525.48 145.24 527.88 149.56 528.96 152.56L523.56 155.44H535.68C534.6 151.84 532.44 147.4 530.4 143.92ZM554.76 155.44L551.28 154C553.92 149.56 557.28 142.72 559.08 137.68C554.16 138.52 549 139.24 543.72 139.84C546 143.56 548.28 148 549.12 151.12L540.36 155.44H554.76ZM482.04 202.24H486.12V191.68H482.04V202.24ZM482.04 167.68V177.52H486.12V167.68H482.04ZM486.12 143.68H482.04V153.52H486.12V143.68ZM577.56 207.64V221.2H568.32V237.4H553.92V221.2H531V207.64H537.84V194.08H535.8V193.12C530.4 214.12 520.2 228.52 505.2 237.16C503.4 233.68 499.68 228.28 496.8 225.52C503.76 222.04 509.64 216.52 514.2 209.44C512.76 207.88 511.08 206.32 509.28 204.76C507.84 206.44 506.52 208.12 505.08 209.56C504.12 208.72 502.56 207.52 500.88 206.44V217H482.04V227.32H467.52V129.04H500.88V193.48C504 188.68 506.64 183.04 508.44 177.16H503.52V155.44H514.92C513.48 152.2 511.44 148.36 509.52 145.36L516.12 142C513.12 142.12 510.24 142.12 507.48 142.24C507 138.88 505.32 133.48 503.88 130.36C525 129.64 549.36 127.36 563.76 123.28L573.6 134.32C569.4 135.52 564.84 136.6 560.04 137.44L573.6 142.36C570.36 146.92 567.36 151.72 564.6 155.44H576V177.16H568.32V180.76H575.88V194.08H568.32V207.64H577.56ZM628.08 213.64H643.32V208.6H628.08V213.64ZM643.32 191.44H628.08V196.48H643.32V191.44ZM602.04 160.36H616.2V155.68H602.04V160.36ZM655.68 160.72H670.44V155.68H655.68V160.72ZM616.2 140.08H602.04V144.16H616.2V140.08ZM670.44 140.08H655.68V144.16H670.44V140.08ZM632.52 172.6H602.04V237.4H584.76V127.72H632.52V172.6ZM688.08 127.72V217.48C688.08 226.36 686.4 231.28 681.12 234.16C675.72 237.04 668.52 237.4 657.96 237.4C657.6 234.4 656.52 230.2 655.2 226.24H628.08V232.36H612.36V178.84H659.64V220H667.56C669.72 220 670.44 219.28 670.44 217.24V172.96H639.12V127.72H688.08ZM714.36 196C725.52 196 734.4 205 734.4 216.04C734.4 227.08 725.52 236.08 714.36 236.08C703.32 236.08 694.32 227.08 694.32 216.04C694.32 205 703.32 196 714.36 196ZM714.36 226C719.88 226 724.32 221.56 724.32 216.04C724.32 210.52 719.88 206.08 714.36 206.08C708.96 206.08 704.4 210.52 704.4 216.04C704.4 221.56 708.96 226 714.36 226ZM24.96 253.08C33.96 254.04 45.24 254.52 58.2 254.52C70.2 254.52 84.84 253.8 94.32 252.84V272.28C85.8 273 69.96 273.72 58.32 273.72C45.48 273.72 34.92 273.12 24.96 272.4V253.08ZM38.04 305.28C37.08 309.36 36.24 312.84 36.24 316.68C36.24 323.4 42.48 328.56 58.68 328.56C74.64 328.56 89.88 326.76 101.4 323.76L101.52 344.4C90 346.92 76.08 348.36 59.4 348.36C30.24 348.36 16.56 338.52 16.56 321.24C16.56 313.92 18.12 307.92 18.96 303.6L38.04 305.28ZM140.16 253.08C149.16 254.04 160.44 254.52 173.4 254.52C185.4 254.52 200.04 253.8 209.52 252.84V272.28C201 273 185.16 273.72 173.52 273.72C160.68 273.72 150.12 273.12 140.16 272.4V253.08ZM153.24 305.28C152.28 309.36 151.44 312.84 151.44 316.68C151.44 323.4 157.68 328.56 173.88 328.56C189.84 328.56 205.08 326.76 216.6 323.76L216.72 344.4C205.2 346.92 191.28 348.36 174.6 348.36C145.44 348.36 131.76 338.52 131.76 321.24C131.76 313.92 133.32 307.92 134.16 303.6L153.24 305.28ZM287.04 247.68C286.2 251.28 285.24 255.84 284.52 259.2C283.8 262.44 283.08 265.8 282.36 268.92C285.6 268.68 288.36 268.56 290.52 268.56C304.32 268.56 313.44 275.04 313.44 293.04C313.44 307.08 311.88 326.76 306.72 337.32C302.64 345.96 295.56 348.96 285.84 348.96C281.16 348.96 275.52 348.24 271.2 347.28L268.08 328.2C272.52 329.4 279.72 330.72 282.72 330.72C286.56 330.72 289.32 329.4 290.88 326.16C293.88 320.16 295.32 306.12 295.32 294.96C295.32 286.2 291.72 285.12 284.28 285.12C282.84 285.12 280.92 285.24 278.52 285.48C273.72 304.2 264.72 333.24 254.52 349.68L235.56 342.12C246.96 326.76 254.76 303.96 259.2 287.52C256.08 288 253.44 288.36 251.76 288.6C247.92 289.2 240.96 290.16 237 290.88L235.32 271.32C240 271.68 244.56 271.44 249.36 271.32C252.84 271.2 257.76 270.84 263.16 270.48C264.84 261.12 265.68 252.84 265.44 245.4L287.04 247.68ZM339 236.76C342.12 241.32 346.44 249 348.48 253.08L337.2 257.88C334.8 252.96 330.96 245.88 327.72 241.32L339 236.76ZM324.24 242.52C327.24 246.96 331.44 254.76 333.6 258.96L329.64 260.64C336.84 271.92 345.84 292.68 349.08 303.72L330.48 312.24C327.6 298.32 319.56 277.08 310.92 266.04L321.12 261.72C318.84 257.04 315.84 251.16 312.96 247.08L324.24 242.52ZM372.656 351.12C365.576 342.48 355.496 332.16 347.216 324.84L362.456 311.76C370.856 318.72 382.856 331.08 388.136 337.8L372.656 351.12ZM42.24 416.48H29.88C29.64 422.6 29.16 429.2 28.32 435.92C31.92 436.28 35.04 436.4 36.96 436.4C38.52 436.4 39.6 436.04 40.56 434.84C41.52 433.4 42 428.48 42.24 416.48ZM92.28 393.8L109.92 398C104.88 413.72 97.92 427.88 89.28 440C91.92 446.84 94.92 450.8 97.8 450.8C100.2 450.8 101.64 444.8 102.24 430.16C106.2 434.24 112.32 438.32 117 440.12C114.36 463.52 108.72 468.56 96.36 468.56C88.44 468.56 81.96 463.4 76.8 454.76C71.4 460.16 65.4 464.96 59.04 469.04C56.52 465.32 50.16 458 46.44 454.64C55.08 449.96 62.76 443.84 69.24 436.52C65.16 423.08 62.64 406.52 61.2 389.24H30V400.64H59.4C59.4 400.64 59.28 404.84 59.28 406.76C58.92 431.24 58.32 442.28 55.44 446.12C52.8 449.6 50.04 450.8 46.44 451.52C43.2 452.12 38.16 452.24 32.64 452.24C32.4 447.32 30.6 440.72 28.2 436.4C26.52 449.12 23.16 461.96 17.04 471.2C14.04 467.72 6.12 461.24 2.16 459.2C11.04 445.04 11.64 423.8 11.64 408.08V372.08H60.12C59.88 366.56 59.76 361.04 59.76 355.52H78.12C78 361.04 78 366.56 78.24 372.08H91.8C88.08 369.2 83.52 366.08 79.8 363.8L90.36 353.36C96.48 356.6 104.88 361.88 109.08 365.84L103.08 372.08H115.8V389.24H79.2C80.04 399.08 81.36 408.56 83.04 416.84C86.76 409.76 89.88 402.08 92.28 393.8ZM209.76 426.92H188.16C190.32 430.52 192.96 433.76 195.84 436.64C200.64 433.76 205.68 430.16 209.76 426.92ZM217.56 426.92L227.28 433.76C221.28 438.08 214.44 442.28 208.2 445.76C215.04 449.36 223.08 452.12 232.56 453.8C228.72 457.52 223.8 464.84 221.52 469.52C194.52 463.16 179.64 449.36 169.68 426.92H157.8V449C165.36 447.92 173.16 446.84 180.72 445.88L181.56 461.24C163.44 464 143.88 466.76 129.24 468.8L125.4 452.84C129.72 452.36 134.52 451.88 139.8 451.28V426.92H120.36V411.68H139.92V359.12H216.84V373.28H157.8V377.36H213.84V390.68H157.8V394.52H213.84V407.84H157.8V411.68H230.04V426.92H217.56ZM342.96 415.64C342.96 440.96 328.08 459.44 296.88 464.72L285.84 447.44C290.88 446.84 294.12 446.12 297.6 445.28C312.84 441.56 323.04 430.88 323.04 415.04C323.04 399.56 315.48 388.52 301.68 385.28C300.12 395 297.96 405.44 294.6 416.6C287.52 440.6 276.72 456.68 262.56 456.68C247.68 456.68 236.4 440.6 236.4 420.08C236.4 391.52 261 367.28 293.04 367.28C323.64 367.28 342.96 388.4 342.96 415.64ZM255.24 418.16C255.24 428.6 258.84 434 263.04 434C267.84 434 271.44 426.68 275.76 412.76C278.4 404.6 280.44 395.12 281.88 385.76C264.12 390.56 255.24 406.76 255.24 418.16ZM428.04 373.04V370.16H382.2V373.04H428.04ZM428.04 386.24V383.24H382.2V386.24H428.04ZM445.56 359.24V397.16H365.52V359.24H445.56ZM435.48 429.68H424.08C425.64 432.68 427.68 435.44 429.96 438.08C432.12 435.44 433.92 432.68 435.48 429.68ZM376.2 447.32L388.56 446.6V443.48H376.2V447.32ZM376.2 428.48V431.72H388.56V428.48H376.2ZM388.56 413.84H376.2V416.72H388.56V413.84ZM445.56 416.12L456.36 420.08C453.36 431.36 448.68 440.6 442.56 448.16C448.2 451.52 454.8 454.04 462.12 455.72C458.64 458.84 454.08 465.2 451.92 469.28C444 467 437.04 463.64 431.04 459.32C425.52 463.52 419.28 466.88 412.44 469.64C410.88 466.4 408 461.84 405.24 458.48V469.4H388.56V460.76C375.24 461.72 361.92 462.68 351.48 463.52L350.4 448.64C353.4 448.52 356.76 448.4 360.36 448.16V413.84H351.48V400.16H459.6V413.84H405.24V455.36C410.28 453.56 414.96 451.04 419.16 448.04C415.32 443.36 412.2 438.08 409.44 432.2L418.56 429.68H407.4V416.6H442.68L445.56 416.12ZM488.16 432.68H504.72V427.28H488.16V432.68ZM504.72 409.64H488.16V414.68H504.72V409.64ZM521.52 395.12V453.08C521.52 460.04 520.2 464 515.76 466.4C511.32 468.92 505.8 469.16 498.72 469.16C497.88 464.84 495.48 458.36 493.32 454.52C496.8 454.76 501.36 454.76 502.8 454.64C504.24 454.64 504.72 454.16 504.72 452.84V445.28H488.16V468.68H471.72V395.12H521.52ZM553.2 450.8V393.32H570.36V451.04C570.36 459.08 568.92 463.4 563.64 466.04C558.48 468.68 551.76 469.16 543.24 469.04C542.4 464.36 539.64 457.04 537.12 452.6C542.52 452.96 548.76 452.96 550.68 452.84C552.6 452.84 553.2 452.36 553.2 450.8ZM545.28 396.44V445.64H529.32V396.44H545.28ZM553.68 372.56H576V388.28H465.72V372.56H489C487.08 368.84 483.96 364.4 481.08 361.04L497.76 355.28C501.96 359.72 506.64 365.72 508.56 370.28L501.96 372.56H533.64C537.12 367.16 540.6 360.56 542.64 355.16L561.72 360.68C559.08 364.88 556.32 368.96 553.68 372.56ZM644.04 396.44V400.4H671.64V396.44H644.04ZM644.04 380.24V384.2H671.64V380.24H644.04ZM610.44 430.04L621.6 426.56C624.12 432.68 626.4 440.6 627.12 446.12C630.24 442.88 632.88 438.92 634.92 434.48H626.16V421.64L615.6 426.32C615.36 424.4 614.76 422.24 614.16 419.84L610.44 420.2V430.04ZM602.52 406.4L609.24 405.92C608.4 404.12 607.68 402.44 606.84 400.76C605.4 402.68 603.96 404.6 602.52 406.4ZM679.8 415.04L693.84 425.6C688.44 429.8 683.28 434.12 678.6 437.72C682.92 443 688.32 447.44 695.04 450.44C691.92 453.56 686.88 460.16 684.72 464.48C677.04 460.04 671.16 453.08 666.6 445.4V453.44C666.6 460.4 665.64 464.48 661.32 466.76C657 469.16 651.6 469.4 644.4 469.4C643.92 465.08 642.12 458.84 640.32 454.64C643.8 454.76 648 454.76 649.32 454.76C650.76 454.76 651.12 454.4 651.12 453.2V432.92C646.44 447.68 638.64 458.36 629.04 464.6C626.88 461.36 621.48 455.36 618.36 453.08C621.24 451.4 623.88 449.36 626.28 447.08L614.52 450.8C614.16 445.88 612.48 438.68 610.44 432.68V469.4H595.56V432.92C594.36 443.36 592.08 453.8 589.2 460.76C586.32 458.84 580.08 456.08 576.72 454.76C579.84 447.8 581.4 437 582.12 427.04L595.56 429.32V421.4L579.96 422.72L578.16 407.84L587.16 407.36C588.48 405.56 589.8 403.64 591.24 401.72C588 396.32 582.72 390.08 578.16 385.28L586.56 373.4L588.72 375.44C591.72 368.96 594.6 361.52 596.4 355.52L611.4 360.68C606.96 369.2 602.04 378.56 597.84 385.28C598.68 386.24 599.4 387.2 600.12 388.16C603.84 381.92 607.32 375.56 609.96 370.04L624 376.4C619.32 383.48 613.92 391.28 608.52 398.6L618.24 394.52C622.8 402.68 627.12 413.24 628.56 420.32H641.76L644.28 419.96L651.12 422.72V413.6H628.44V367.04H646.8C648.36 363.08 649.8 358.76 650.64 355.16L670.56 357.92C668.88 361.16 667.08 364.16 665.28 367.04H688.08V413.6H666.6V414.08C667.68 417.8 669.12 421.76 670.92 425.48C674.28 422 677.52 418.28 679.8 415.04ZM714.36 428C725.52 428 734.4 437 734.4 448.04C734.4 459.08 725.52 468.08 714.36 468.08C703.32 468.08 694.32 459.08 694.32 448.04C694.32 437 703.32 428 714.36 428ZM714.36 458C719.88 458 724.32 453.56 724.32 448.04C724.32 442.52 719.88 438.08 714.36 438.08C708.96 438.08 704.4 442.52 704.4 448.04C704.4 453.56 708.96 458 714.36 458Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div class="absolute top-0 w-screen h-screen z-[-1] js-heroParallax">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img class="size-full object-cover" src="https://picsum.photos/id/30/1200/800" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img class="size-full object-cover" src="https://picsum.photos/id/42/1200/800" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img class="size-full object-cover" src="https://picsum.photos/id/50/1200/800" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
