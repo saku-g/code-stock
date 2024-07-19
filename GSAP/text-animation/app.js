@@ -248,25 +248,3 @@ gsap.to(cardList, {
     markers: true,
   },
 });
-
-// Swiper
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  effect: 'fade',
-  autoplay: {
-    delay: 5000,
-  },
-});
-
-// 画像をピン留め
-gsap.to('.js-heroParallax', {
-  scrollTrigger: {
-    trigger: '.js-heroParallax',
-    start: 'top top',
-    end: 'bottom top',
-    pin: true,
-    onEnter: () => {
-      console.log('enter');
-    },
-  },
-});

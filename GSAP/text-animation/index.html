@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Lessons</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Roboto', 'Noto Sans JP', 'sans-serif'],
+            },
+            keyframes: {
+              fadeToggle: {
+                '0%': {
+                  opacity: 0,
+                },
+                '100%': {
+                  opacity: 1,
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <!-- My JS File -->
+    <script src="app.js" defer></script>
+  </head>
+  <body class="bg-gray-100 pt-[50vh] min-h-dvh">
+    <div class="container mx-auto">
+      <div class="grid gap-y-32">
+        <p class="text-4xl font-bold text-neutral-900" data-animation="fadeIn">FadeIn</p>
+        <p class="text-4xl font-bold text-neutral-900 origin-center" data-animation="blurIn">BlurIn</p>
+        <p class="text-4xl font-bold text-neutral-900 overflow-hidden" data-animation="oneCharFadeInUp">
+          OneCharFadeInUp
+        </p>
+        <p class="text-4xl font-bold text-neutral-900" data-animation="slideInLeft">SlideInLeft</p>
+        <p class="text-4xl font-bold text-neutral-900" data-animation="slideInRight">slideInRight</p>
+        <p class="text-4xl font-bold text-neutral-900" data-animation="slideInTop">slideInTop</p>
+        <p class="text-4xl font-bold text-neutral-900" data-animation="slideInBottom">slideInBottom</p>
+        <div class="overflow-hidden">
+          <p class="text-4xl font-bold text-neutral-900" data-animation="smoothIn">smoothIn</p>
+        </div>
+        <p
+          class="text-4xl font-bold text-neutral-900 after:content-['|'] after:ml-1 after:animate-[fadeToggle_1s_ease-in-out_infinite]"
+          data-animation="oneCharTyping"
+        >
+          Typing
+        </p>
+        <div
+          class="relative overflow-hidden w-fit before:absolute before:inset-0 before:p-2 before:bg-gradient-to-r before:from-blue-500 before:to-blue-900 before:translate-x-[--pos,-101%]"
+          data-animation="bgSlideLeft"
+        >
+          <p class="text-4xl font-bold text-neutral-900 opacity-0" data-animation="bgSlideLeft_text">bgSlideLeft</p>
+        </div>
+        <div
+          class="relative overflow-hidden w-fit before:absolute before:inset-0 before:p-2 before:bg-gradient-to-r before:from-blue-500 before:to-blue-900 before:translate-y-[--pos,-101%]"
+          data-animation="bgSlideBottom"
+        >
+          <p class="text-4xl font-bold text-neutral-900 opacity-0" data-animation="bgSlideBottom_text">bgSlideBottom</p>
+        </div>
+      </div>
+    </div>
+    <section class="mt-80 py-20 js-sideScrollSection">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-stone-900">GSAPを使って横スクロールさせるエリア</h2>
+        <div class="h-[400px] mt-12 overflow-hidden js-sideScrollContent">
+          <div class="absolute flex gap-x-6 js-cardList">
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+            <section class="grid min-w-[320px] bg-white">
+              <div class="order-1 p-4">
+                <h3 class="text-xl font-bold">Card Title</h3>
+                <p class="mt-2 leading-7">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis inventore mollitia recusandae
+                  quidem.
+                </p>
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  class="w-full h-auto object-cover"
+                  src="https://picsum.photos/600/400?random=1"
+                  alt=""
+                  width="300"
+                  height="200"
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
