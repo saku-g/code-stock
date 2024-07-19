@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Stack</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js" defer></script>
+    <!-- Lenis -->
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js" defer></script>
+    <!-- My Script -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="js-stickyStackWrapper">
+      <section class="relative w-full h-screen">
+        <img class="absolute inset-0 size-full object-cover" src="https://picsum.photos/id/50/1000/1000" alt="" />
+      </section>
+      <section class="relative w-full h-screen">
+        <img class="absolute inset-0 size-full object-cover" src="https://picsum.photos/id/51/1000/1000" alt="" />
+      </section>
+      <section class="relative w-full h-screen">
+        <img class="absolute inset-0 size-full object-cover" src="https://picsum.photos/id/52/1000/1000" alt="" />
+      </section>
+      <section class="relative w-full h-screen">
+        <img class="absolute inset-0 size-full object-cover" src="https://picsum.photos/id/53/1000/1000" alt="" />
+      </section>
+    </div>
+  </body>
+</html>
