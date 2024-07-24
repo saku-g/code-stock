@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Fullpage Swicth</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Roboto', 'Noto Sans JP', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <!-- My Script -->
+    <script src="app.js" defer></script>
+  </head>
+  <body class="font-sans text-white">
+    <div class="h-dvh overflow-hidden">
+      <section class="fixed top-0 min-h-dvh h-full p-20 bg-red-700 js-fullScreen">
+        <div class="js-fullScreenInner">
+          <h2 class="text-7xl font-bold">Section 1</h2>
+          <p class="text-xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dicta autem fugiat numquam eos error
+            consequatur nulla sint sapiente nihil, doloribus ratione illum quos aspernatur. Praesentium ullam excepturi
+            consequatur culpa ratione iure magnam! Magni, distinctio earum? Maiores, eum nobis? Ex fugiat iusto unde ut
+            reiciendis quam sit ad, dolore consequuntur modi aperiam natus? Ipsam ullam quae delectus odio perferendis
+            ea, esse quibusdam quas quam tempore sed animi. Officiis consequatur deleniti modi repudiandae laborum id
+            fugiat ad quae molestiae? Natus rem eligendi doloremque! Illo delectus dolor quas, architecto cum, repellat
+            et eligendi ea hic reprehenderit itaque labore. Molestiae, quibusdam deleniti.
+          </p>
+          <p class="text-xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dicta autem fugiat numquam eos error
+            consequatur nulla sint sapiente nihil, doloribus ratione illum quos aspernatur. Praesentium ullam excepturi
+            consequatur culpa ratione iure magnam! Magni, distinctio earum? Maiores, eum nobis? Ex fugiat iusto unde ut
+            reiciendis quam sit ad, dolore consequuntur modi aperiam natus? Ipsam ullam quae delectus odio perferendis
+            ea, esse quibusdam quas quam tempore sed animi. Officiis consequatur deleniti modi repudiandae laborum id
+            fugiat ad quae molestiae? Natus rem eligendi doloremque! Illo delectus dolor quas, architecto cum, repellat
+            et eligendi ea hic reprehenderit itaque labore. Molestiae, quibusdam deleniti.
+          </p>
+        </div>
+      </section>
+      <section class="fixed top-0 min-h-dvh h-full p-20 bg-blue-700 js-fullScreen">
+        <div class="js-fullScreenInner">
+          <h2 class="text-7xl font-bold">Section 2</h2>
+          <p class="text-xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dicta autem fugiat numquam eos error
+            consequatur nulla sint sapiente nihil, doloribus ratione illum quos aspernatur. Praesentium ullam excepturi
+            consequatur culpa ratione iure magnam! Magni, distinctio earum? Maiores, eum nobis? Ex fugiat iusto unde ut
+            reiciendis quam sit ad, dolore consequuntur modi aperiam natus? Ipsam ullam quae delectus odio perferendis
+            ea, esse quibusdam quas quam tempore sed animi. Officiis consequatur deleniti modi repudiandae laborum id
+            fugiat ad quae molestiae? Natus rem eligendi doloremque! Illo delectus dolor quas, architecto cum, repellat
+            et eligendi ea hic reprehenderit itaque labore. Molestiae, quibusdam deleniti.
+          </p>
+          <p class="text-xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dicta autem fugiat numquam eos error
+            consequatur nulla sint sapiente nihil, doloribus ratione illum quos aspernatur. Praesentium ullam excepturi
+            consequatur culpa ratione iure magnam! Magni, distinctio earum? Maiores, eum nobis? Ex fugiat iusto unde ut
+            reiciendis quam sit ad, dolore consequuntur modi aperiam natus? Ipsam ullam quae delectus odio perferendis
+            ea, esse quibusdam quas quam tempore sed animi. Officiis consequatur deleniti modi repudiandae laborum id
+            fugiat ad quae molestiae? Natus rem eligendi doloremque! Illo delectus dolor quas, architecto cum, repellat
+            et eligendi ea hic reprehenderit itaque labore. Molestiae, quibusdam deleniti.
+          </p>
+        </div>
+      </section>
+      <section class="fixed top-0 min-h-dvh h-full p-20 bg-green-700 js-fullScreen">
+        <div class="js-fullScreenInner">
+          <h2 class="text-7xl font-bold">Section 3</h2>
+          <p class="text-xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dicta autem fugiat numquam eos error
+            consequatur nulla sint sapiente nihil, doloribus ratione illum quos aspernatur. Praesentium ullam excepturi
+            consequatur culpa ratione iure magnam! Magni, distinctio earum? Maiores, eum nobis? Ex fugiat iusto unde ut
+            reiciendis quam sit ad, dolore consequuntur modi aperiam natus? Ipsam ullam quae delectus odio perferendis
+            ea, esse quibusdam quas quam tempore sed animi. Officiis consequatur deleniti modi repudiandae laborum id
+            fugiat ad quae molestiae? Natus rem eligendi doloremque! Illo delectus dolor quas, architecto cum, repellat
+            et eligendi ea hic reprehenderit itaque labore. Molestiae, quibusdam deleniti.
+          </p>
+          <p class="text-xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dicta autem fugiat numquam eos error
+            consequatur nulla sint sapiente nihil, doloribus ratione illum quos aspernatur. Praesentium ullam excepturi
+            consequatur culpa ratione iure magnam! Magni, distinctio earum? Maiores, eum nobis? Ex fugiat iusto unde ut
+            reiciendis quam sit ad, dolore consequuntur modi aperiam natus? Ipsam ullam quae delectus odio perferendis
+            ea, esse quibusdam quas quam tempore sed animi. Officiis consequatur deleniti modi repudiandae laborum id
+            fugiat ad quae molestiae? Natus rem eligendi doloremque! Illo delectus dolor quas, architecto cum, repellat
+            et eligendi ea hic reprehenderit itaque labore. Molestiae, quibusdam deleniti.
+          </p>
+          <p class="text-xl mt-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic distinctio alias impedit ab fugiat vel
+            necessitatibus consequuntur unde! Accusantium dolor neque fugiat voluptatibus deleniti nostrum impedit, nemo
+            necessitatibus, veniam unde eaque. Culpa facere provident voluptatum sapiente, perferendis quis quidem!
+            Facilis impedit voluptates alias. Ad voluptatibus doloribus praesentium sequi eos maiores quia repellendus
+            harum molestias iste perspiciatis pariatur sit, quos quas vero non vitae, numquam laborum! Aliquam nesciunt
+            ducimus dicta iure ratione pariatur, recusandae rem assumenda nulla quidem, earum dolor quo ut magni beatae
+            id aut officiis saepe similique incidunt hic voluptates deserunt at quod. Nihil sit velit facilis vitae, in
+            asperiores numquam iste illo, repellendus qui deserunt nobis consectetur, rem harum doloribus aliquid iusto
+            commodi ipsum obcaecati. Tempora beatae nam eos quos at magni iste aliquid labore, illo saepe officia rem
+            vel. Non fuga saepe fugit perspiciatis dolorum rerum ex minima vel dicta praesentium magnam error, quisquam
+            quidem nostrum impedit, tempore autem eligendi expedita maxime perferendis itaque a? Ratione inventore
+            labore totam, vel tempore, obcaecati sit quis consequatur impedit eius exercitationem. In asperiores numquam
+            animi tempora magnam accusamus esse maxime nemo temporibus, reiciendis consectetur alias vero eaque ipsam
+            neque id itaque fugit recusandae. Corporis minima a maxime, dolores nostrum labore?
+          </p>
+        </div>
+      </section>
+      <section class="fixed top-0 min-h-dvh h-full p-20 bg-purple-700 js-fullScreen">
+        <div class="js-fullScreenInner">
+          <h2 class="text-7xl font-bold">Section 4</h2>
+          <p class="text-xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dicta autem fugiat numquam eos error
+            consequatur nulla sint sapiente nihil, doloribus ratione illum quos aspernatur. Praesentium ullam excepturi
+            consequatur culpa ratione iure magnam! Magni, distinctio earum? Maiores, eum nobis? Ex fugiat iusto unde ut
+            reiciendis quam sit ad, dolore consequuntur modi aperiam natus? Ipsam ullam quae delectus odio perferendis
+            ea, esse quibusdam quas quam tempore sed animi. Officiis consequatur deleniti modi repudiandae laborum id
+            fugiat ad quae molestiae? Natus rem eligendi doloremque! Illo delectus dolor quas, architecto cum, repellat
+            et eligendi ea hic reprehenderit itaque labore. Molestiae, quibusdam deleniti.
+          </p>
+          <p class="text-xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dicta autem fugiat numquam eos error
+            consequatur nulla sint sapiente nihil, doloribus ratione illum quos aspernatur. Praesentium ullam excepturi
+            consequatur culpa ratione iure magnam! Magni, distinctio earum? Maiores, eum nobis? Ex fugiat iusto unde ut
+            reiciendis quam sit ad, dolore consequuntur modi aperiam natus? Ipsam ullam quae delectus odio perferendis
+            ea, esse quibusdam quas quam tempore sed animi. Officiis consequatur deleniti modi repudiandae laborum id
+            fugiat ad quae molestiae? Natus rem eligendi doloremque! Illo delectus dolor quas, architecto cum, repellat
+            et eligendi ea hic reprehenderit itaque labore. Molestiae, quibusdam deleniti.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
